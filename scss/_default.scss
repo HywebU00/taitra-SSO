@@ -2,9 +2,6 @@
 %outerSection{
   width: 94vw; margin:0 auto;
   max-width: $wwNormal;
-  // @media screen and (min-width: $wwSlim){
-  //   width: 92vw;
-  // }
 }
 // % % % % % % % % % % % % //
 
@@ -33,7 +30,9 @@ h4{ font-size: 1.2em;}
 h5{ font-size: 1.1em;}
 h6{font-size: 1em;}
 
-.main { // 主內容區，.webHeader之後，.webFooter之前
+
+// 主內容區，.webHeader之後，.webFooter之前
+.main { 
   flex: 1 0 auto;
 }
 
@@ -73,12 +72,6 @@ h6{font-size: 1em;}
       }
     }
   }
-
-  // @media screen and (min-width: $wwMedium){
-  //   p{ margin: 0;display: inline-block;
-  //     &+p{margin-left: 1.5em;}
-  //   }
-  // }
 
   @media screen and (min-width: $wwNormal){
     .ftContent{ max-width: $wwNormal;}
