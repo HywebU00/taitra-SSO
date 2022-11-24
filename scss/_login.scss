@@ -84,22 +84,16 @@
 
 	.btnDv {
 		padding: 1em 0 0;
-		button,
-		input[type='button'],
-		input[type='submit'],
-		input[type='reset'] {
-			height: 3.2em;
-			flex-grow: 1;
+		button,input[type='button'],input[type='submit'],input[type='reset'] {
+			height: 3.2em;flex-grow: 1;min-width: 5em;
 			&:only-child {
-				width: 100%;
-				flex-basis: 100%;
+				width: 100%;flex-basis: 100%; 
 			}
 		}
 		.button {
 			flex-grow: 1;
 			&:only-child {
-				width: 100%;
-				flex-basis: 100%;
+				width: 100%;flex-basis: 100%;
 			}
 			&>a {
 				height: 3.2em;
@@ -116,17 +110,13 @@
 	}
 	.links {
 		overflow: hidden;margin: 0.5em 0.6em;font-size: 0.938rem;line-height: 1.5;
-		a {
-			display: inline-block;
-		}
+		a {display: inline-block;}
 		p {
 			float: left;line-height: inherit;margin: 0;
-			a {
-				margin-left: 0.3em;
-			}
+			a {margin-left: 0.3em;}
 		}
 		.forget {
-			float: right;line-height: inherit;
+			float: right;line-height: inherit; margin-left: 1em;
 		}
 	}
 	.hr {margin: 20px auto;}
@@ -154,7 +144,7 @@
 			.movingBg{
 				z-index: 9;
 				top: auto; bottom: 0; height: 4px; 
-				background-color: #007CC9;border-radius: 0;
+				background-color: $msgHint;border-radius: 0;
 			}
 			li{
 				padding: 0; margin: 0; height: 2em; line-height: 2;
@@ -212,9 +202,6 @@
 			&:hover, &:focus{	box-shadow: #007CC9 0 0 0 1px;}
 			
 		}
-	}
-
-	@media screen and (min-width: $wwSlim){
 	}
 
 
