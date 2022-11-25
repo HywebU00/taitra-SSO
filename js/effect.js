@@ -77,33 +77,18 @@ $(function () {
         ],
     });
 
-    // 固定步驟
-    // var _steps = $('.steps');
-    // const hh = $('.webHeader').outerHeight();
-    // const stepHeight = _steps.innerHeight();
-    // _window.scroll(function(){
-    //   if( $(this).scrollTop() > hh) {
-    //     _steps.addClass('fixed');
-    //     _body.offset({top: stepHeight});
-    //   } else {
-    //     _steps.removeClass('fixed');
-    //     _body.offset({top: 0});
 
-    //   }
-    // })
     // 固定header
     var _header = $('.webHeader');
-    // const hh = $('.webHeader').outerHeight();
-    // const stepHeight = _steps.innerHeight();
-    _window.scroll(function () {
-        if ($(this).scrollTop() > hh) {
-            _header.addClass('fixed');
-            // _body.offset({top: stepHeight});
-        } else {
-            _header.removeClass('fixed');
-            // _body.offset({top: 0});
-        }
-    });
+    if (_header.length > 0) {
+        _window.scroll(function () {
+            if ($(this).scrollTop() > hh) {
+                _header.addClass('fixed');
+            } else {
+                _header.removeClass('fixed');
+            }
+        });
+    }
     // 常見問題開合
     $('.qaList').each(function () {
         let _qaList = $(this);
@@ -269,4 +254,35 @@ $(function () {
         });
         _body.removeClass('noScroll');
     });
+
+
+    // ---------------------------------------- 登入頁，登入區垂直置中 
+    // 20221125
+    var winResizeTimer;
+    var _loginLayout = $('.loginLayout');
+    var _loginArea = _loginLayout.find('.col1');
+    var loginHeight = _loginArea.innerHeight();
+    vCenterLogin();
+
+    _window.resize( function () {
+        clearTimeout(winResizeTimer);
+		winResizeTimer = setTimeout( function (){
+            vCenterLogin();
+        }, 120)
+    });
+
+    function vCenterLogin(){
+        if ( _window.width() >= wwNormal ) {
+            loginHeight = _loginArea.innerHeight();
+            if ( _window.height() > loginHeight) {
+                _loginLayout.addClass('vCenter');
+            } else {
+                _loginLayout.removeClass('vCenter');
+            }
+        } else {
+            _loginLayout.removeClass('vCenter');
+        }
+    }
+
+
 });
