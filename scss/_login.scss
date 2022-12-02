@@ -1,11 +1,11 @@
 // 會員登入, 忘記密碼, 重設密碼
 .formB {
-	width: 94%;padding: 30px 0;margin: 20px auto;max-width: 440px;
+	width: 94%;padding: 30px 6vw;margin: 20px auto;max-width: 440px;
 	font-size: 1.15em;
 	background-color: #fff;border-radius: 16px;
 
 	@media screen and (min-width: $wwSlim){
-		// padding: 30px 3.5vw;
+		padding: 30px;
 	}
 	@media screen and (min-width: $wwNormal) {
 		margin: 20px auto;
@@ -100,7 +100,7 @@
 
 .loginHere {
 	width: 96%;max-width: 420px;box-shadow: none;
-	&.formB{  border-radius: 0;}
+	&.formB{  border-radius: 0; padding: 30px 0;}
 	h1.logos {
 		text-align: center;margin: 20px 0 30px;display: flex;justify-content: center;
 		img {display: inline-block;width: auto;height: 80px;}
