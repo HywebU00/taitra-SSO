@@ -694,7 +694,8 @@ button.icon_search::after {
     background-position: center -150px;
 }
 hr {
-    border-top: 1px solid #e6e6e6;
+    border: none;
+    border-top: 1px solid $borderColorLight;
     margin: 1em 0;
     height: 0;
 }

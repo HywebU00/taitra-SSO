@@ -31,7 +31,7 @@
         }
     }
 
-    @media screen and (max-width: $wwNormal - 1) {
+    @media screen and (max-width: calc($wwNormal - 1px)) {
         // outline: 1px solid pink;
         display: block;
         width: auto;
@@ -79,7 +79,7 @@
 }
 
 // 處理小螢幕時「*Company Name」和「Sign up for individual membership」重疊問題
-@media screen and (max-width: $wwSlim - 1) {
+@media screen and (max-width: calc($wwSlim - 1px)) {
     .eng {
         .formLayout .company {
             padding-top: 1.7em;
@@ -93,10 +93,13 @@
     margin: 0 auto 1em;
     padding: 0;
     background-color: #fff;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    @media screen and (max-width: 767px) {
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    @media screen and (max-width: calc($wwMedium - 1px)) {
         padding: 1em 1.5em;
         border-radius: 1em;
+    }
+    @media screen and (max-width: calc($wwSlim - 1px)){
+        padding: 1em 3vw;
     }
     .formLayout {
         margin: 10px auto;
@@ -181,7 +184,7 @@
 
     @media screen and (min-width: $wwNormal) {
         padding: 1em;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
         border-radius: 1em;
         .formLayout,
         .agreeCheck,
