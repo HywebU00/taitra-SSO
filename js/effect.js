@@ -1,17 +1,17 @@
 $(function () {
-    var _html = $('html');
+    // var _html = $('html');
     var _body = $('body');
     var _window = $(window);
 
     var ww = _window.width();
     var wh = _window.height();
-    var wwNew = ww;
+    // var wwNew = ww;
 
-    const wwSlim = 500;
+    // const wwSlim = 500;
     const wwMedium = 700;
     const wwNormal = 1020;
-    const wwWide = 1440;
-    const wwMaximum = 1920;
+    // const wwWide = 1440;
+    // const wwMaximum = 1920;
 
     const speed = 400;
     const speedFaster = 200;
@@ -81,11 +81,14 @@ $(function () {
     // 固定header
     var _header = $('.webHeader');
     if (_header.length > 0) {
+        var hh = _header.outerHeight();
         _window.scroll(function () {
-            if ($(this).scrollTop() > hh) {
+            if ($(this).scrollTop() > 0) {
                 _header.addClass('fixed');
+                _body.offset({top: hh});
             } else {
                 _header.removeClass('fixed');
+                _body.offset({top: 0});
             }
         });
     }
