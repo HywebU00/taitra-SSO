@@ -83,7 +83,7 @@ $(function () {
     if (_header.length > 0) {
         var hh = _header.outerHeight();
         _window.scroll(function () {
-            if ($(this).scrollTop() > 0) {
+            if ($(this).scrollTop() > 0 && _header.is(':visible')) {
                 _header.addClass('fixed');
                 _body.offset({top: hh});
             } else {
