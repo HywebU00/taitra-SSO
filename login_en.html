@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-Hans-TW">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>登入頁 【外貿協會 TAITRA SSO】</title>
+  <title>英文版登入頁 【外貿協會 TAITRA SSO】</title>
   <link rel="stylesheet" href="slick/slick.css">
   <link rel="stylesheet" href="css/design.css">
   <script src="js/jquery-3.6.0.min.js"></script>
@@ -26,8 +26,8 @@
         <div class="sliderTabs">
           <div class="tabItems">
             <ul>
-              <li id="nm_start" class="now"><h3>一般登入</h3></li>
-              <li id="qr_start"><h3>QR Code登入</h3></li>
+              <li id="nm_start" class="now"><h3>Sign In</h3></li>
+              <li id="qr_start"><h3>QR Code Sign In</h3></li>
             </ul>
           </div>
 
@@ -41,40 +41,39 @@
                     <span id="errorLoginMessage"></span>
                   </div>
                   <div class="formRow shiftLabel">
-                    <label for="username" class="shift">電子信箱</label>
+                    <label for="username" class="shift">Email</label>
                     <input type="text" id="username" value="" autocomplete="off" name="username" class="shift">
                   </div>
                   <div class="formRow pw shiftLabel">
-                    <label for="password" class="">密碼</label>
-                    <input name="password" type="password" value="" required="" id="password" class="shift"><span
-                      class="viewIcon">顯示密碼</span>
+                    <label for="password" class="">Password</label>
+                    <input name="password" type="password" value="" required="" id="password" class="shift"><span class="viewIcon">show password</span>
                   </div>
           
                   <div class="keepAndForget">
-                    <label class="singleCheck"><input type="checkbox" id="rememberMyAccount"><span>記住我的帳號</span></label>
+                    <label class="singleCheck"><input type="checkbox" id="rememberMyAccount"><span>Remember my account</span></label>
 
                     <!-- GUI 測試：帳密錯誤時出現燈箱訊息，套版請刪除-->
                     <!-- <span class="showLightbox" data-id="msg-1" type="button">X</span> -->
                   </div>
                   <div class="btnDv">
-                    <input name="submit" type="submit" value="登入">
+                    <input name="submit" type="submit" value="Sign In">
                   </div>
                 </form>
           
                 <div class="links">
                   <p>
-                    <span>還不是會員嗎？</span>
+                    <span>Not a member?</span>
                     <span class="link">
-                      <a href="#" target="_blank">立刻註冊</a>
+                      <a href="#" target="_blank">Sign up now</a>
                     </span>
                   </p>
-                  <span class="forget"><a href="#" target="_blank">忘記密碼?</a></span>
+                  <span class="forget"><a href="#" target="_blank">Forgot your password??</a></span>
                 </div>
               </div>
               <div class="slideInBlock">
 
                 <div class="qrCodeLogin">
-                  <p>請開啟外貿協會 Authenticator APP 掃描登入<button class="qqq showLightbox" data-id="msg-2" type="button" title="QR Code 掃描說明">?</button></p>
+                  <p>Please Open TAITRA's Authenticator APP to scan the login QR Code <button class="qqq showLightbox" data-id="msg-2" type="button" title="How to login in with QR Code">?</button></p>
                   
                   <div class="qrCodeImg">
                     <img id="qrimage" alt="qrcode" width="200" height="200" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA+gAAAPoCAYAAABNo9TkAACAAElEQVR42uzd9b+Vdbr/8fk7vraO
@@ -699,13 +698,14 @@ ERERQCciIiIiIiIC6EREREREREQE0ImIiIiIiIgAOhEREREREREBdCIiIiIiIiKATkREREREREQA
 nYiIiIiIiCgT+jeLuTwlrPw9GwAAAABJRU5ErkJggg==">
                   </div>
 
-                  <p>網頁識別碼：<em class="qrcheck" id="qrcheck">SDQO</em>
-                    <time class="countDown title="QR Code 有效時間" id="qrtime">06:45</time>
+                  <p>Issue code: <em class="qrcheck" id="qrcheck">SDQO</em>
+                    <time class="countDown title="QR Code will expire in" id="qrtime">06:45</time>
                   </p>
-                  <!-- <p><em class="qrcheck">驗證碼已失效</em></p> -->
+                  <!-- <p><em class="qrcheck">QR Code has expired.</em></p> -->
 
+                  <!-- <p><em class="qrcheck">QR Code has expired.</em></p> -->
 
-                  <span type="button" id="qrgen" class="reGen">重新產生</span>
+                  <span type="button" id="qrgen" class="reGen">Regenerate</span>
                 </div>
 
               </div>
@@ -716,9 +716,8 @@ nYiIiIiIiCgT+jeLuTwlrPw9GwAAAABJRU5ErkJggg==">
 
         <!-- ********* -->
 
-        <!-- <div class="hr"><span>或</span></div> -->
         <section class="otherLogin">
-          <h3>或使用社群帳號登入</h3>
+          <h3>Or Login in with Social Media</h3>
           <ul>
             <li class="facebook"><a href="x">FACEBOOK</a></li>
             <li class="google"><a href="x">GOOGLE</a></li>
@@ -728,51 +727,40 @@ nYiIiIiIiCgT+jeLuTwlrPw9GwAAAABJRU5ErkJggg==">
         </section>
 
         <section class="downloadApp">
-          <h3>下載外貿協會 Authenticator APP</h3>
+          <h3>Download TAITRA’s Authenticator APP</h3>
           <ul>
-            <li><a href="#"><img src="images/badge_AppStore.svg" alt="在 app store 下載"></a></li>
-            <li><a href="#"><img src="images/badge_GooglePlay.svg" alt="在 google play 下載"></a></li>
+            <li><a href="#"><img src="images/badge_AppStore.svg" alt="Download on the app store"></a></li>
+            <li><a href="#"><img src="images/badge_GooglePlay.svg" alt="Get it on google play"></a></li>
           </ul>
         </section>
       </section>
       <footer class="webFooter">
         <ul class="links">
-          <li><a href="mailto:ourmail@company.com.tw">與我們聯絡</a></li>
-          <li><a href="x">隱私權政策</a></li>
-          <li><a href="x">關於我們</a></li>
-        </ul>
+          <li><a href="mailto:ourmail@company.com.tw">Contact us</a></li>
+          <li><a href="x">Privacy Policy</a></li>
+          <li><a href="x">About us</a></li>
+          </ul>
       </footer>
     </div>
     <div class="col2">
       <section class="sideBoard">
         <article class="words">
-          <h2>一組帳密<br>暢行外貿協會服務</h2>
-          <p>註冊成為外貿協會會員，即可使用以下服務：</p>
+          <p>Taiwantrade.com is powered by TAITRA (Taiwan External Trade Development Council), Taiwan's foremost nonprofit trade promoting organization with 63 Taiwan Trade Centers worldwide.</p>
+          <h2>TAITRA Affiliated Websites</h2>
           <ul>
-            <li>台灣經貿網</li>
-            <li>採購洽談會</li>
-            <li>研討會及拓銷團活動報名</li>
-            <li>台灣國際專業展</li>
+            <li><a href="https://www.taiwantrade.com" target="_blank">www.taiwantrade.com</a></li>
+            <li><a href="https://www.taiwantradeshows.com.tw/" target="_blank">www.taiwantradeshows.com.tw</a></li>
           </ul>
         </article>
-        <div class="freeLand">
-          <h3>會員常見問題</h3>
-          <div class="more"><a href="/faq_list.html" target="_blank">More</a></div>
-          <ul class="faq">
-            <li><a href="/html/faq_list.html?q=loginlock" target="_blank"><span class="qNumber">1</span>登入被鎖住怎麼辨？</a></li>
-            <li><a href="/html/taitraRegister_FAQ.pdf" target="_blank"><span class="qNumber">2</span>台灣精品總聯絡人貿協會員帳號如何綁定台灣統編公司身份？</a></li>
-            <li><a href="/html/faq_list.html?q=2" target="_blank"><span class="qNumber">3</span>忘記密碼怎麼辦?</a></li>
-          </ul>
-        </div>
       </section>
     </div>
   </div>
   <footer class="webFooter">
     <div class="ftContent">
       <ul class="links">
-        <li><a href="mailto:ourmail@company.com.tw">與我們聯絡</a></li>
-        <li><a href="x">隱私權政策</a></li>
-        <li><a href="x">關於我們</a></li>
+        <li><a href="mailto:ourmail@company.com.tw">Contact us</a></li>
+        <li><a href="x">Privacy Policy</a></li>
+        <li><a href="x">About us</a></li>
       </ul>
     </div>
   </footer>
@@ -789,9 +777,9 @@ nYiIiIiIiCgT+jeLuTwlrPw9GwAAAABJRU5ErkJggg==">
 
   <!-- 燈箱：QR Code 掃描說明-->
   <section class="message lightbox" data-id="msg-2">
-    <span class="closeThis"><a class="hideLightbox" title="關閉"></a></span>
-    <h2>QR Code 掃描說明</h2>
-    <p>請用手機相機鏡頭掃描QR Code或點選下方平台圖徽下載APP。安裝APP後，請依APP指示登入外貿協會會員帳號，進行會員帳號挷定裝置作業。完成後，請開啟會員帳號的掃碼器，掃描登入QR Code, 將可於已認證裝置使用指紋/臉部辨識登入本會網站服務。</p>
+    <span class="closeThis"><a class="hideLightbox" title="Close"></a></span>
+    <h2>How to login in with QR Code</h2>
+    <p>Please scan QR Code on the web page or click the below logos with your mobile phone's camera to download the app. After the installation of the app, please follow the instruction of the app to login in TAITRA member's account and complete the process of linking the account to your mobile phone. Then, please click the account's code scanner to scan the login QR Code. You can login in to TAITRA's website's services using the authenticated device without entering your TAITRA's account and password.</p>
   </section>
   
 </body>
