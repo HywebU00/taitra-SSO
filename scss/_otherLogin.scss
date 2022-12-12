@@ -1,8 +1,8 @@
 // 其它社群帳號登入
 .otherLogin {
-	text-align: center;
+	text-align: center; margin: 1.5em auto 0;
 	h3 {
-		margin: 0 0 5px;
+		margin: 0 0 .5em;
 		font-size: 0.875em;color: $fontColorDark;font-weight: normal;
 	}
 	ul {
@@ -57,4 +57,35 @@
 			}
 		}
 	}
+}
+
+.downloadApp{
+	margin: 2em 0 0;
+	h3 {
+		margin: 0 0 1em;
+		font-size: 0.875em;color: $fontColorDark;font-weight: normal;
+	}
+	ul {
+		list-style: none;margin:0;padding: 0;
+		display: flex;justify-content: center;
+	}
+	li{
+		margin: 0 5px; padding: 0;
+		flex: 0 0 auto;
+		a{
+			display: block;margin: 0 auto; padding: 2px 12px; 
+			border-radius: 5px;
+			box-shadow: $gray 0 0 0 2px;
+			transition: .2s;
+			&:hover, &:focus{
+				box-shadow: $grayDark 0 0 0 2px;
+			}
+		}
+		img{
+			display: block; width: 120px; height: 40px; object-fit: contain;
+			
+		}
+
+	}
+
 }

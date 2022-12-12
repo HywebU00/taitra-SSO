@@ -2,6 +2,7 @@
     @extend %outerSection;
     position: relative;
     button.ctrlBtn {
+        display: none;
         height: 2.4em;line-height: 2.4;border-radius: 2em;
         position: absolute;right: 0;top: -3.1em;
     }
@@ -48,5 +49,9 @@
                 }
             }
         }
+    }
+
+    @media screen and (min-width: $wwNormal){
+        button.ctrlBtn{display: block;} 
     }
 }
